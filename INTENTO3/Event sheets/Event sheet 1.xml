@@ -50,13 +50,13 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Fade" id="4" name="Set fade-out time" sid="631930049667687" type="Sprite">
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="631930049667687" type="fadeScreen">
                     <param id="0" name="Fade-out time">0</param>
                 </action>
-                <action behavior="Fade" id="2" name="Set fade-in time" sid="849217804891670" type="Sprite">
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="849217804891670" type="fadeScreen">
                     <param id="0" name="Fade-in time">1</param>
                 </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="594070169319720" type="Sprite" />
+                <action behavior="Fade" id="1" name="Start fade" sid="594070169319720" type="fadeScreen" />
                 <action id="-16" name="Wait" sid="928521136042461" type="System">
                     <param id="0" name="Seconds">1.0</param>
                 </action>
@@ -73,13 +73,13 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Fade" id="4" name="Set fade-out time" sid="684387629280168" type="Sprite">
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="684387629280168" type="fadeScreen">
                     <param id="0" name="Fade-out time">0</param>
                 </action>
-                <action behavior="Fade" id="2" name="Set fade-in time" sid="594399616202084" type="Sprite">
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="594399616202084" type="fadeScreen">
                     <param id="0" name="Fade-in time">1</param>
                 </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="589893321089772" type="Sprite" />
+                <action behavior="Fade" id="1" name="Start fade" sid="589893321089772" type="fadeScreen" />
                 <action id="-16" name="Wait" sid="537851229266391" type="System">
                     <param id="0" name="Seconds">1.0</param>
                 </action>
@@ -96,13 +96,13 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Fade" id="4" name="Set fade-out time" sid="481469405562240" type="Sprite">
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="481469405562240" type="fadeScreen">
                     <param id="0" name="Fade-out time">0</param>
                 </action>
-                <action behavior="Fade" id="2" name="Set fade-in time" sid="187664077140004" type="Sprite">
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="187664077140004" type="fadeScreen">
                     <param id="0" name="Fade-in time">1</param>
                 </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="881929439546001" type="Sprite" />
+                <action behavior="Fade" id="1" name="Start fade" sid="881929439546001" type="fadeScreen" />
                 <action id="-16" name="Wait" sid="565888250272771" type="System">
                     <param id="0" name="Seconds">1.0</param>
                 </action>
@@ -119,13 +119,13 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Fade" id="4" name="Set fade-out time" sid="759680200659078" type="Sprite">
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="759680200659078" type="fadeScreen">
                     <param id="0" name="Fade-out time">0</param>
                 </action>
-                <action behavior="Fade" id="2" name="Set fade-in time" sid="168997116994159" type="Sprite">
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="168997116994159" type="fadeScreen">
                     <param id="0" name="Fade-in time">1</param>
                 </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="202114707555029" type="Sprite" />
+                <action behavior="Fade" id="1" name="Start fade" sid="202114707555029" type="fadeScreen" />
                 <action id="-16" name="Wait" sid="159298054738309" type="System">
                     <param id="0" name="Seconds">1.0</param>
                 </action>
@@ -300,7 +300,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Bullet" id="4" name="Bounce off object" sid="212441660061495" type="shipBase">
+                <action behavior="Bullet" disabled="1" id="4" name="Bounce off object" sid="212441660061495" type="shipBase">
                     <param id="0" name="Object">duck</param>
                 </action>
                 <action id="5" name="Set frame" sid="705933493612662" type="duck">
@@ -532,7 +532,7 @@
             <actions>
                 <action id="-23" name="Move at angle" sid="789933008446944" type="lotus">
                     <param id="0" name="Angle">1/(ship.X + ship.Y)</param>
-                    <param id="1" name="Distance">10</param>
+                    <param id="1" name="Distance">5</param>
                 </action>
             </actions>
         </event-block>
@@ -545,7 +545,7 @@
             <actions>
                 <action id="-23" name="Move at angle" sid="499648537029545" type="Flower">
                     <param id="0" name="Angle">1/(ship.X + ship.Y)</param>
-                    <param id="1" name="Distance">10</param>
+                    <param id="1" name="Distance">5</param>
                 </action>
             </actions>
         </event-block>

@@ -535,10 +535,10 @@
                         </behavior-instance>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>100</speed>
+                                <speed>50</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
+                                <bounce-off-solids>Yes</bounce-off-solids>
                                 <set-angle>No</set-angle>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -1830,7 +1830,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite" uid="293">
+                <instance type="fadeScreen" uid="293">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1844,14 +1844,14 @@
                                 <fade-in-time>0</fade-in-time>
                                 <wait-time>1</wait-time>
                                 <fade-out-time>1</fade-out-time>
-                                <destroy>After fade out</destroy>
+                                <destroy>No</destroy>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>671</x>
+                        <x>667</x>
                         <y>385</y>
                         <z>0</z>
                         <width>1336</width>
