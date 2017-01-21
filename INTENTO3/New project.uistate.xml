@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Layout 1</layout>
+        <layout order="2">Layout 2</layout>
+        <layout order="3">Layout 3</layout>
+        <layout order="6">transitions</layout>
+        <layout order="1">trans1-2</layout>
+        <layout order="5">trans2-3</layout>
+        <layout order="4">trans3-4</layout>
+        <layout order="9">ending</layout>
+        <layout active="1" order="10">Layout 4</layout>
+        <event-sheet order="7">Event sheet 1</event-sheet>
+        <event-sheet order="8">Event sheet transitions</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/shipBase/" />
+        <folder expanded="1" path="animation-folder/wave/" />
+        <folder expanded="1" path="animation-folder/ship/" />
+        <folder expanded="1" path="animation-folder/lotus/" />
+        <folder expanded="1" path="animation-folder/bgLayout2/" />
+        <folder expanded="1" path="animation-folder/duck/" />
+        <folder expanded="1" path="animation-folder/bgLayout1/" />
+        <folder expanded="1" path="animation-folder/layout1end/" />
+        <folder expanded="1" path="animation-folder/layout2Start/" />
+        <folder expanded="1" path="animation-folder/bgLayout3/" />
+        <folder expanded="1" path="animation-folder/layout3start/" />
+        <folder expanded="1" path="animation-folder/layout2end/" />
+        <folder expanded="1" path="animation-folder/fish/" />
+        <folder expanded="1" path="animation-folder/activateFish1/" />
+        <folder expanded="1" path="animation-folder/activateFish2/" />
+        <folder expanded="1" path="animation-folder/layout3end/" />
+        <folder expanded="1" path="animation-folder/bgLayout4/" />
+        <folder expanded="1" path="animation-folder/raft/" />
+        <folder expanded="1" path="animation-folder/raft2/" />
+        <folder expanded="1" path="animation-folder/introAnimation/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/trans12/" />
+        <folder expanded="1" path="animation-folder/trans23/" />
+        <folder expanded="1" path="animation-folder/trans34/" />
+        <folder expanded="1" path="animation-folder/ending/" />
+        <folder expanded="1" path="animation-folder/trans4end/" />
+        <folder expanded="1" path="animation-folder/splashScan/" />
+        <folder expanded="1" path="animation-folder/Flower/" />
+        <folder expanded="1" path="animation-folder/fish2/" />
+        <folder expanded="1" path="animation-folder/waveCurvasScan/" />
+        <folder expanded="1" path="animation-folder/ActivateFishLayout4/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+    </folders-expanded>
+</c2uistate>

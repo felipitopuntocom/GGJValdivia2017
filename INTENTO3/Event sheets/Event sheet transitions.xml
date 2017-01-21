@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet transitions</name>
+    <events>
+        <variable constant="0" name="Brightness" sid="948708644840851" static="0" type="number">0</variable>
+        <variable constant="0" name="Musicintro" sid="419239076002681" static="0" type="number">0</variable>
+        <variable constant="0" name="Transitions" sid="209571179993600" static="0" type="number">0</variable>
+        <event-block sid="398683691281808">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="120953668684967" type="System">
+                    <param id="0" name="Variable">Musicintro</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="143917395635761" type="Audio">
+                    <param id="0" name="Audio file">Intro</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;intro&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="450506377744634" type="System">
+                    <param id="0" name="Variable">Musicintro</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="706270741546579">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="248085276379458" type="System">
+                    <param id="0" name="Variable">Musicintro</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="109591903570749" type="Audio">
+                    <param id="0" name="Tag">&quot;Intro.ogg&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="963251567896261">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="649449719814880" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="750796825960889" type="System">
+                    <param id="0" name="Object to create">Sprite</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="676458583907247">
+            <conditions>
+                <condition id="1" name="On any click" sid="232000666219300" type="Mouse" />
+                <condition id="7" name="Cursor is over object" sid="605265813226715" type="Mouse">
+                    <param id="0" name="Object">introAnimation</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set volume" sid="587006260564309" type="Audio">
+                    <param id="0" name="Tag">&quot;intro&quot;</param>
+                    <param id="1" name="dB">-4</param>
+                </action>
+                <action id="-16" name="Wait" sid="293095571729634" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="3" name="Set volume" sid="762017299808108" type="Audio">
+                    <param id="0" name="Tag">&quot;intro&quot;</param>
+                    <param id="1" name="dB">-8</param>
+                </action>
+                <action id="-16" name="Wait" sid="871396355496028" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="3" name="Set volume" sid="199442301577294" type="Audio">
+                    <param id="0" name="Tag">&quot;intro&quot;</param>
+                    <param id="1" name="dB">-12</param>
+                </action>
+                <action id="-16" name="Wait" sid="131241238869457" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="3" name="Set volume" sid="887193757481672" type="Audio">
+                    <param id="0" name="Tag">&quot;intro&quot;</param>
+                    <param id="1" name="dB">-16</param>
+                </action>
+                <action id="-16" name="Wait" sid="340846532912287" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="3" name="Set volume" sid="429475137217366" type="Audio">
+                    <param id="0" name="Tag">&quot;intro&quot;</param>
+                    <param id="1" name="dB">-20</param>
+                </action>
+                <action id="-16" name="Wait" sid="816782364407715" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="32" name="Add mute effect" sid="157287585368072" type="Audio">
+                    <param id="0" name="Tag">&quot;intro&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="670524228434382" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="778101575412614" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="209693341610217">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="791070307723841" type="introAnimation">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="622773885316439" type="introAnimation">
+                    <param id="0" name="Speed">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="140639662952477">
+            <conditions>
+                <condition id="1" name="On any click" sid="976058142728162" type="Mouse" />
+                <condition id="7" name="Cursor is over object" sid="563355206086090" type="Mouse">
+                    <param id="0" name="Object">trans12</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="994621598139837" type="System">
+                    <param id="0" name="Layout">Layout 2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="585868331381019">
+            <conditions>
+                <condition id="1" name="On any click" sid="896420917989768" type="Mouse" />
+                <condition id="7" name="Cursor is over object" sid="346703749880688" type="Mouse">
+                    <param id="0" name="Object">trans23</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="481258212723916" type="System">
+                    <param id="0" name="Layout">Layout 3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="794498138777552">
+            <conditions>
+                <condition id="1" name="On any click" sid="241532496508004" type="Mouse" />
+                <condition id="7" name="Cursor is over object" sid="732412768831254" type="Mouse">
+                    <param id="0" name="Object">trans34</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="618189581445112" type="System">
+                    <param id="0" name="Layout">Layout 4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="923008014885728">
+            <conditions>
+                <condition id="1" name="On any click" sid="283059554187280" type="Mouse" />
+                <condition id="7" name="Cursor is over object" sid="153643534412575" type="Mouse">
+                    <param id="0" name="Object">ending</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="403906924844603" type="System">
+                    <param id="0" name="Layout">Layout 4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="632262728918688">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="673794454904612" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="537336900007816" type="Sprite">
+                    <param id="0" name="Opacity">Brightness</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

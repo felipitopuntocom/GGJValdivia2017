@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="WaterFriction" sid="334214396050631" static="0" type="number">0</variable>
+        <variable constant="0" name="WaveDistanceMax" sid="497426786348127" static="0" type="number">0</variable>
+        <variable constant="0" name="WaveToBoatForce" sid="426480744103484" static="0" type="number">0</variable>
+        <variable constant="0" name="BoatTimer" sid="913148870484823" static="0" type="number">0</variable>
+        <variable constant="0" name="LastMouseY" sid="313839722297375" static="0" type="number">0</variable>
+        <variable constant="0" name="LastMouseX" sid="453764029607439" static="0" type="number">0</variable>
+        <variable constant="0" name="music" sid="849656441303156" static="0" type="number">0</variable>
+        <event-block sid="860368432851107">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="667229367279362" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="602928209315011" type="ship">
+                    <param id="0" name="Pin to">shipBase</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="933129788266158">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="517668378936629" type="System">
+                    <param id="0" name="Variable">music</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="188194252588767" type="Audio">
+                    <param id="0" name="Audio file">BG_music</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="505794511463826" type="System">
+                    <param id="0" name="Variable">music</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>transition 1-2</comment>
+        <event-block sid="665278924954235">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="688987810867434" type="shipBase">
+                    <param id="0" name="Object">layout1end</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="631930049667687" type="Sprite">
+                    <param id="0" name="Fade-out time">0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="849217804891670" type="Sprite">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="594070169319720" type="Sprite" />
+                <action id="-16" name="Wait" sid="928521136042461" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="831761545749629" type="System">
+                    <param id="0" name="Layout">trans1-2</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>transition 2-3</comment>
+        <event-block sid="123542877165626">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="165006695506620" type="shipBase">
+                    <param id="0" name="Object">layout2end</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="684387629280168" type="Sprite">
+                    <param id="0" name="Fade-out time">0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="594399616202084" type="Sprite">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="589893321089772" type="Sprite" />
+                <action id="-16" name="Wait" sid="537851229266391" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="633688000978802" type="System">
+                    <param id="0" name="Layout">trans2-3</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>transition 3-4</comment>
+        <event-block sid="414740353384470">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="513852639310339" type="shipBase">
+                    <param id="0" name="Object">layout3end</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="481469405562240" type="Sprite">
+                    <param id="0" name="Fade-out time">0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="187664077140004" type="Sprite">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="881929439546001" type="Sprite" />
+                <action id="-16" name="Wait" sid="565888250272771" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="617428138365967" type="System">
+                    <param id="0" name="Layout">trans3-4</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Ending</comment>
+        <event-block sid="948230007331997">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="881687347309632" type="shipBase">
+                    <param id="0" name="Object">trans4end</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="759680200659078" type="Sprite">
+                    <param id="0" name="Fade-out time">0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="168997116994159" type="Sprite">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="202114707555029" type="Sprite" />
+                <action id="-16" name="Wait" sid="159298054738309" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="420703058321567" type="System">
+                    <param id="0" name="Layout">ending</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>create wave</comment>
+        <event-block sid="656519275296328">
+            <conditions>
+                <condition id="1" name="On any click" sid="948276251614935" type="Mouse" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="240114687647594" type="System">
+                    <param id="0" name="Object to create">wave</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">Mouse.X</param>
+                    <param id="3" name="Y">mouse.Y</param>
+                </action>
+                <action id="3" name="Start" sid="192963701113554" type="wave">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="0" name="Play" sid="753049741406248" type="Audio">
+                    <param id="0" name="Audio file">Water_2</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>destroy wave</comment>
+        <event-block sid="848754856305895">
+            <conditions>
+                <condition id="4" name="On finished" sid="623407615309899" type="wave">
+                    <param id="0" name="Animation">wave.AnimationName</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="785588747802263" type="wave" />
+            </actions>
+        </event-block>
+        <comment>ship movement </comment>
+        <event-block sid="674762627431042">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="487146840388433" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="509672338133406" type="System">
+                    <param id="0" name="Variable">WaveToBoatForce</param>
+                    <param id="1" name="Value">600</param>
+                </action>
+                <action id="-9" name="Set value" sid="588318646677876" type="System">
+                    <param id="0" name="Variable">WaterFriction</param>
+                    <param id="1" name="Value">WaveToBoatForce/2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="265306646257835">
+            <conditions />
+            <actions>
+                <action id="-9" name="Set value" sid="929274612290563" type="System">
+                    <param id="0" name="Variable">WaveDistanceMax</param>
+                    <param id="1" name="Value">sqrt(WindowWidth^2 + WindowHeight^2)/4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="159861524464412">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="591677809277048" type="System">
+                    <param id="0" name="Variable">BoatTimer</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="504999476823997" type="System">
+                    <param id="0" name="Variable">BoatTimer</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="432106294150261">
+            <conditions>
+                <condition id="0" name="On click" sid="660896963485657" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="333235590720700" type="System">
+                    <param id="0" name="Variable">LastMouseX</param>
+                    <param id="1" name="Value">Mouse.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="125501613665738" type="System">
+                    <param id="0" name="Variable">LastMouseY</param>
+                    <param id="1" name="Value">Mouse.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="886242007716484">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="557816003495221" type="System">
+                            <param id="0" name="First value">distance(Mouse.X,Mouse.Y,shipBase.X,shipBase.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">WaveDistanceMax</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="861937662213969" type="System">
+                            <param id="0" name="Variable">BoatTimer</param>
+                            <param id="1" name="Value">distance(LastMouseX,LastMouseY,shipBase.X,shipBase.Y)/WaveDistanceMax* 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="495046826056603">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="254353896305694" type="System">
+                    <param id="0" name="Variable">BoatTimer</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="385025776243612" type="System">
+                    <param id="0" name="Variable">BoatTimer</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="507757201528500" type="shipBase">
+                    <param id="0" name="Speed">(WaveDistanceMax - distance(LastMouseX,LastMouseY,shipBase.X,shipBase.Y))/WaveDistanceMax*WaveToBoatForce</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="434425613079342" type="shipBase">
+                    <param id="0" name="Angle">angle(LastMouseX,LastMouseY,shipBase.X,shipBase.Y)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="214818723248415">
+            <conditions>
+                <condition behavior="Bullet" id="0" name="Compare speed" sid="359525448294188" type="shipBase">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="586315398240398" type="shipBase">
+                    <param id="0" name="Speed">Self.Bullet.Speed - (WaterFriction*dt)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="225247361984671">
+                    <conditions>
+                        <condition behavior="Bullet" id="0" name="Compare speed" sid="442270233358897" type="shipBase">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Speed">WaterFriction*dt</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="139385078584008" type="shipBase">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>duck</comment>
+        <event-block sid="448410945208849">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="825863607758606" type="duck">
+                    <param id="0" name="Object">shipBase</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="212441660061495" type="shipBase">
+                    <param id="0" name="Object">duck</param>
+                </action>
+                <action id="5" name="Set frame" sid="705933493612662" type="duck">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+                <action id="0" name="Play" sid="512994058858117" type="Audio">
+                    <param id="0" name="Audio file">Duck_1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="807703298876673">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="419484339278487" type="System">
+                    <param id="0" name="First value">duck.X</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">duck.XActual</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="223075518380943" type="duck">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="118735285027364">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="368930008721505" type="System">
+                    <param id="0" name="First value">duck.X</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">duck.XActual</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="409419903874661" type="duck">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="750968888864929">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="830429725017726" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="128291106047371" type="duck">
+                    <param id="0" name="Instance variable">XActual</param>
+                    <param id="1" name="Value">duck.X</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>fish1</comment>
+        <event-block sid="627935751707094">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="710565910690166" type="ship">
+                    <param id="0" name="Object">activateFish1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="577183654919805" type="System">
+                    <param id="0" name="Object to create">fish</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">807</param>
+                    <param id="3" name="Y">249</param>
+                </action>
+                <action id="-9" name="Destroy" sid="962887470317435" type="activateFish1" />
+                <action id="0" name="Play" sid="419787985010050" type="Audio">
+                    <param id="0" name="Audio file">Water_3</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="546011126975113">
+            <conditions>
+                <condition id="4" name="On finished" sid="924364310266808" type="fish">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="390939951887486" type="fish" />
+            </actions>
+        </event-block>
+        <comment>fish2</comment>
+        <event-block sid="733753745265017">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="452066868915648" type="ship">
+                    <param id="0" name="Object">activateFish2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="501968841092747" type="System">
+                    <param id="0" name="Object to create">fish2</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">233</param>
+                    <param id="3" name="Y">408</param>
+                </action>
+                <action id="-9" name="Destroy" sid="156457448099063" type="activateFish2" />
+                <action id="-3" name="Create object" sid="676291490273923" type="System">
+                    <param id="0" name="Object to create">fish</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">420</param>
+                    <param id="3" name="Y">149</param>
+                </action>
+                <action id="0" name="Play" sid="990103726703346" type="Audio">
+                    <param id="0" name="Audio file">Water_3</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="297836499927893">
+            <conditions>
+                <condition id="4" name="On finished" sid="690536972180168" type="fish2">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="471875304855401" type="fish" />
+                <action id="-9" name="Destroy" sid="190252832462933" type="fish2" />
+            </actions>
+        </event-block>
+        <comment>raft effect</comment>
+        <event-block sid="890933020974900">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="357078848267571" type="ship">
+                    <param id="0" name="Object">raft</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="1" name="Set acceleration" sid="257183013045196" type="shipBase">
+                    <param id="0" name="Acceleration">400</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="798067912375319" type="shipBase">
+                    <param id="0" name="Angle">245</param>
+                </action>
+                <action id="-10" name="Set value" sid="448601676659624" type="ship">
+                    <param id="0" name="Instance variable">raftEffect</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="975232475507905">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="443458430063688" type="ship">
+                    <param id="0" name="Object">raft2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="1" name="Set acceleration" sid="315509681697025" type="shipBase">
+                    <param id="0" name="Acceleration">400</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="404434412276275" type="shipBase">
+                    <param id="0" name="Angle">45</param>
+                </action>
+                <action id="-10" name="Set value" sid="425200975629388" type="ship">
+                    <param id="0" name="Instance variable">raftEffect</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>deaccelerate baseship</comment>
+        <event-block sid="568838295579908">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="118842498605964" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="724816562933312" type="ship">
+                    <param id="0" name="Instance variable">raftEffect</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="552990120719673">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="781673490824684" type="ship">
+                    <param id="0" name="Instance variable">raftEffect</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="1" name="Set acceleration" sid="411114910687350" type="shipBase">
+                    <param id="0" name="Acceleration">-400</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="401933945815288">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="287321833476141" type="ship">
+                    <param id="0" name="Object">ActivateFishLayout4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="306145970870052" type="System">
+                    <param id="0" name="Object to create">fish2</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">739</param>
+                    <param id="3" name="Y">391</param>
+                </action>
+                <action id="-9" name="Destroy" sid="982833974303412" type="ActivateFishLayout4" />
+                <action id="0" name="Play" sid="296299439370034" type="Audio">
+                    <param id="0" name="Audio file">Water_3</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="778577147916033">
+            <conditions>
+                <condition id="4" name="On finished" sid="669628437857934" type="fish2">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="108274013177417" type="fish2" />
+            </actions>
+        </event-block>
+        <event-block sid="474692977509132">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="797045977038040" type="ship">
+                    <param id="0" name="Object">lotus</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="789933008446944" type="lotus">
+                    <param id="0" name="Angle">1/(ship.X + ship.Y)</param>
+                    <param id="1" name="Distance">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="665585989545466">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="354140563063509" type="ship">
+                    <param id="0" name="Object">Flower</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="499648537029545" type="Flower">
+                    <param id="0" name="Angle">1/(ship.X + ship.Y)</param>
+                    <param id="1" name="Distance">10</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
