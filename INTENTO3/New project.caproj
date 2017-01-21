@@ -682,7 +682,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="929983839467359" speed="0.5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\GGJ\Img\trans12.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -693,7 +693,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="233323238654469" speed="0.5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\GGJ\Img\trans23.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -704,7 +704,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="110405012602209" speed="0.5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\GGJ\Img\trans34.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -715,7 +715,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="535849933648657" speed="0.5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\GGJ\Img\end2.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -1122,6 +1122,7 @@
         <layout>Layout 2.xml</layout>
         <layout>Layout 3.xml</layout>
         <layout>Layout 4.xml</layout>
+        <layout>Layout 5.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
