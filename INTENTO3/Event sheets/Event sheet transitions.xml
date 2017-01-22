@@ -27,7 +27,6 @@
                 </action>
             </actions>
         </event-block>
-        <comment>fade out</comment>
         <event-block sid="963251567896261">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="649449719814880" type="System" />
@@ -47,6 +46,10 @@
                 <condition id="1" name="On any click" sid="232000666219300" type="Mouse" />
                 <condition id="7" name="Cursor is over object" sid="605265813226715" type="Mouse">
                     <param id="0" name="Object">introAnimation</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="544363471065675" type="introAnimation">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">2</param>
                 </condition>
             </conditions>
             <actions>
@@ -323,12 +326,135 @@
         </event-block>
         <event-block sid="572404471025458">
             <conditions>
-                <condition id="3" name="Compare frame" sid="856618178157913" type="introAnimation">
+                <condition id="3" name="Compare frame" sid="856618178157913" type="trans12">
                     <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Number">2</param>
+                    <param id="1" name="Number">0</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="-16" name="Wait" sid="675108385455575" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="997080194772179" type="System">
+                    <param id="0" name="Object to create">narracion121</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">284</param>
+                    <param id="3" name="Y">130</param>
+                </action>
+                <action id="-16" name="Wait" sid="904036468474403" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="550468268092586" type="System">
+                    <param id="0" name="Object to create">narracion122</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">979</param>
+                    <param id="3" name="Y">525</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="291789327816502">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="985358148412748" type="trans23">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="546755741985374" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="594203938059598" type="System">
+                    <param id="0" name="Object to create">narracion23</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">401</param>
+                    <param id="3" name="Y">123</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="346375671235431">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="722374412645544" type="trans34">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="935315194846362" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="708281482071534" type="System">
+                    <param id="0" name="Object to create">narracion341</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">1046</param>
+                    <param id="3" name="Y">58</param>
+                </action>
+                <action id="-16" name="Wait" sid="780081344269853" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="398831722849140" type="System">
+                    <param id="0" name="Object to create">narracion342</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">721</param>
+                    <param id="3" name="Y">215</param>
+                </action>
+                <action id="-16" name="Wait" sid="552271379466829" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="504275037392607" type="System">
+                    <param id="0" name="Object to create">naracion343</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">236</param>
+                    <param id="3" name="Y">336</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="167383849127688">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="905464632524959" type="ending">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="138442333556655" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="341737842841951" type="System">
+                    <param id="0" name="Object to create">Sprite</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">1017</param>
+                    <param id="3" name="Y">103</param>
+                </action>
+                <action id="-16" name="Wait" sid="273599589327203" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="660315428203700" type="System">
+                    <param id="0" name="Object to create">Sprite4</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">308</param>
+                    <param id="3" name="Y">324</param>
+                </action>
+                <action id="-16" name="Wait" sid="373169140150734" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="900844553072436" type="System">
+                    <param id="0" name="Object to create">Sprite5</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">962</param>
+                    <param id="3" name="Y">644</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="383936231457756">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="567821526241214" type="ending">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="126354585210701" type="Sprite" />
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

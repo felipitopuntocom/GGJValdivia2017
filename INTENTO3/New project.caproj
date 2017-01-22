@@ -661,7 +661,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936079768908783" speed="0.3">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="2" hotspotX="0.5" hotspotY="0.5" original-source="G:\GGJ\Img\Title_screen.png" />
                     <frame duration="2.5" hotspotX="0.5" hotspotY="0.5" original-source="G:\GGJ\Img\intro 1.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\GGJ\Img\intro 2.png" />
                 </animation>
@@ -714,9 +714,8 @@
                 <instance-variable name="transition" sid="100797502007907" type="number" />
             </instance-variables>
             <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="535849933648657" speed="0.5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\GGJ\Img\end2.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="535849933648657" speed="1">
+                    <frame duration="5" hotspotX="0.5" hotspotY="0.5" original-source="G:\GGJ\Img\end2.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1024,6 +1023,11 @@
         </object-type>
         <object-type name="narracionintro3" sid="424026498430033">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="409524985241202">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894612961399974" speed="5">
                     <frame duration="1" hotspotX="0.500623" hotspotY="0.5" original-source="C:\Users\Karin\Desktop\003.png">
@@ -1043,6 +1047,11 @@
         </object-type>
         <object-type name="narracionintro4" sid="523286370653279">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="719806605070111">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="721518322776966" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Karin\Desktop\004.png">
@@ -1061,6 +1070,11 @@
         </object-type>
         <object-type name="narracionintro5" sid="484308933460081">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="577780739844229">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="625911855069899" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Karin\Desktop\005.png">
@@ -1105,6 +1119,226 @@
                             <point x="0.498652" y="0.759259" />
                             <point x="0.0296496" y="0.796296" />
                             <point x="0.00269542" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="narracion121" sid="608033682173010">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="519258992945003">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="919306136044578" speed="5">
+                    <frame duration="1" hotspotX="0.501235" hotspotY="0.503546" original-source="G:\GGJ\Txt\007.png">
+                        <collision-poly>
+                            <point x="0.00987654" y="0.0283688" />
+                            <point x="0.498765" y="0.191489" />
+                            <point x="0.918519" y="0.234043" />
+                            <point x="0.362963" y="0.496454" />
+                            <point x="0.977778" y="0.93617" />
+                            <point x="0.017284" y="0.950355" />
+                            <point x="0.320988" y="0.496454" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="narracion122" sid="574231584759403">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="931182870633822">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="144457156478751" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="G:\GGJ\Txt\008.png">
+                        <collision-poly>
+                            <point x="0.0436893" y="0.442623" />
+                            <point x="0.5" y="0.590164" />
+                            <point x="0.932039" y="0.688525" />
+                            <point x="0.906149" y="0.491803" />
+                            <point x="0.991909" y="0.918033" />
+                            <point x="0.5" y="0.885246" />
+                            <point x="0.0113269" y="0.885246" />
+                            <point x="0.00809062" y="0.491803" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="narracion23" sid="610329217798610">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="402643550946514">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="314398072310192" speed="5">
+                    <frame duration="1" hotspotX="0.500666" hotspotY="0.5" original-source="G:\GGJ\Txt\009.png">
+                        <collision-poly>
+                            <point x="0.130493" y="0.620253" />
+                            <point x="0.499334" y="0.21519" />
+                            <point x="0.960053" y="0.189873" />
+                            <point x="0.866844" y="0.367089" />
+                            <point x="0.499334" y="0.879747" />
+                            <point x="0.0266312" y="0.873418" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="narracion341" sid="863025455861342">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="791650826675369" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="G:\GGJ\Txt\010.png">
+                        <collision-poly>
+                            <point x="0.0257511" y="0.196721" />
+                            <point x="0.5" y="0.42623" />
+                            <point x="0.937768" y="0.47541" />
+                            <point x="0.978541" y="0.491803" />
+                            <point x="0.980687" y="0.852459" />
+                            <point x="0.5" y="0.934426" />
+                            <point x="0.0128755" y="0.901639" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="narracion342" sid="745313494013768">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="777275309252991" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\GGJ\Txt\011.png">
+                        <collision-poly>
+                            <point x="0.0393836" y="0.302632" />
+                            <point x="0.5" y="0.302632" />
+                            <point x="0.964041" y="0.276316" />
+                            <point x="0.994863" y="0.5" />
+                            <point x="0.964041" y="0.723684" />
+                            <point x="0.5" y="0.723684" />
+                            <point x="0.010274" y="0.921053" />
+                            <point x="0.00684932" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="naracion343" sid="337724850736877">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="388691093749174" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="G:\GGJ\Txt\012.png">
+                        <collision-poly>
+                            <point x="0.0503145" y="0.262295" />
+                            <point x="0.5" y="0.606557" />
+                            <point x="0.86478" y="0.704918" />
+                            <point x="0.823899" y="0.491803" />
+                            <point x="0.987421" y="0.934426" />
+                            <point x="0.5" y="0.852459" />
+                            <point x="0.0188679" y="0.901639" />
+                            <point x="0.0220126" y="0.491803" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="310948717932237">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="840001037897713">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="273543032757522" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50365" original-source="G:\GGJ\Txt\013.png">
+                        <collision-poly>
+                            <point x="0.143103" y="0.605839" />
+                            <point x="0.5" y="0.364964" />
+                            <point x="0.97931" y="0.0875912" />
+                            <point x="0.951724" y="0.79562" />
+                            <point x="0.5" y="0.722628" />
+                            <point x="0.0155172" y="0.934307" />
+                            <point x="0.0344828" y="0.49635" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Untitled" sid="741237952034581">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="285572769916715" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\GGJ\Img\Untitled-1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="activateFish3" sid="628320019514930">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="689586834737213" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="holdingBoat" sid="977920799427653">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="744453826248960" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\GGJ\Img\holding boat 1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="618226725466490">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="365971074038525">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="787564419534381" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505263" original-source="G:\GGJ\Txt\014.png">
+                        <collision-poly>
+                            <point x="0.0322581" y="0.189474" />
+                            <point x="0.5" y="0.557895" />
+                            <point x="0.928315" y="0.421053" />
+                            <point x="0.983871" y="0.494737" />
+                            <point x="0.958781" y="0.757895" />
+                            <point x="0.5" y="0.705263" />
+                            <point x="0.0448029" y="0.736842" />
+                            <point x="0.0197133" y="0.494737" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="672731484189530">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="520951565216590">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="437121410929510" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\GGJ\Txt\015.png">
+                        <collision-poly>
+                            <point x="0.0394366" y="0.4" />
+                            <point x="0.5" y="0.4" />
+                            <point x="0.928169" y="0.728571" />
+                            <point x="0.909859" y="0.5" />
+                            <point x="0.992958" y="0.928571" />
+                            <point x="0.5" y="0.928571" />
+                            <point x="0.0112676" y="0.885714" />
+                            <point x="0.0112676" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
