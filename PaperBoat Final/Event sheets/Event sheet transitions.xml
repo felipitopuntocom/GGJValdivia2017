@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet transitions</name>
+    <events>
+        <variable constant="0" name="Brightness" sid="948708644840851" static="0" type="number">0</variable>
+        <variable constant="0" name="Musicintro" sid="419239076002681" static="0" type="number">0</variable>
+        <variable constant="0" name="Transitions" sid="209571179993600" static="0" type="number">0</variable>
+        <event-block sid="398683691281808">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="120953668684967" type="System">
+                    <param id="0" name="Variable">Musicintro</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="143917395635761" type="Audio">
+                    <param id="0" name="Audio file">Intro</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;intro&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="450506377744634" type="System">
+                    <param id="0" name="Variable">Musicintro</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="963251567896261">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="649449719814880" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="750796825960889" type="System">
+                    <param id="0" name="Object to create">fadeScreen</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>fade out music</comment>
+        <event-block sid="676458583907247">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="605265813226715" type="Mouse">
+                    <param id="0" name="Object">introAnimation</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="544363471065675" type="introAnimation">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set volume" sid="587006260564309" type="Audio">
+                    <param id="0" name="Tag">&quot;intro&quot;</param>
+                    <param id="1" name="dB">-4</param>
+                </action>
+                <action id="-16" name="Wait" sid="293095571729634" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="3" name="Set volume" sid="762017299808108" type="Audio">
+                    <param id="0" name="Tag">&quot;intro&quot;</param>
+                    <param id="1" name="dB">-8</param>
+                </action>
+                <action id="-16" name="Wait" sid="871396355496028" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="3" name="Set volume" sid="199442301577294" type="Audio">
+                    <param id="0" name="Tag">&quot;intro&quot;</param>
+                    <param id="1" name="dB">-12</param>
+                </action>
+                <action id="-16" name="Wait" sid="131241238869457" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="3" name="Set volume" sid="887193757481672" type="Audio">
+                    <param id="0" name="Tag">&quot;intro&quot;</param>
+                    <param id="1" name="dB">-16</param>
+                </action>
+                <action id="-16" name="Wait" sid="340846532912287" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="3" name="Set volume" sid="429475137217366" type="Audio">
+                    <param id="0" name="Tag">&quot;intro&quot;</param>
+                    <param id="1" name="dB">-20</param>
+                </action>
+                <action id="-16" name="Wait" sid="816782364407715" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="32" name="Add mute effect" sid="157287585368072" type="Audio">
+                    <param id="0" name="Tag">&quot;intro&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="670524228434382" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="240746703607023" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>stop intro animation</comment>
+        <event-block disabled="1" sid="209693341610217">
+            <conditions>
+                <condition id="1" name="On any click" sid="791070307723841" type="Mouse" />
+                <condition id="3" name="Compare frame" sid="436957147765170" type="introAnimation">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="622773885316439" type="introAnimation">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="904885536421792" type="System">
+                    <param id="0" name="Seconds">6</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="670857355229957" type="fadeScreen2">
+                    <param id="0" name="Fade-in time">0</param>
+                </action>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="914862217689469" type="fadeScreen2">
+                    <param id="0" name="Fade-out time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="773224608650263" type="fadeScreen2" />
+            </actions>
+        </event-block>
+        <comment>transitions</comment>
+        <event-block sid="111188556788981">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="215163392837498" type="Mouse">
+                    <param id="0" name="Object">trans12</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="529590027376823" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-3" name="Create object" sid="407122358891766" type="System">
+                    <param id="0" name="Object to create">click</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">200</param>
+                    <param id="3" name="Y">724</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="140639662952477">
+            <conditions>
+                <condition id="1" name="On any click" sid="976058142728162" type="Mouse" />
+                <condition id="7" name="Cursor is over object" sid="563355206086090" type="Mouse">
+                    <param id="0" name="Object">trans12</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="994621598139837" type="System">
+                    <param id="0" name="Layout">Layout 2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="818982137204913">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="435009785329786" type="Mouse">
+                    <param id="0" name="Object">trans23</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="760421362820418" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-3" name="Create object" sid="213619122852502" type="System">
+                    <param id="0" name="Object to create">click</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">200</param>
+                    <param id="3" name="Y">724</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="585868331381019">
+            <conditions>
+                <condition id="1" name="On any click" sid="896420917989768" type="Mouse" />
+                <condition id="7" name="Cursor is over object" sid="346703749880688" type="Mouse">
+                    <param id="0" name="Object">trans23</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="481258212723916" type="System">
+                    <param id="0" name="Layout">Layout 3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="461622272401996">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="233202216606678" type="Mouse">
+                    <param id="0" name="Object">trans34</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="371891917844105" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-3" name="Create object" sid="417960055340607" type="System">
+                    <param id="0" name="Object to create">click</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">200</param>
+                    <param id="3" name="Y">724</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="794498138777552">
+            <conditions>
+                <condition id="1" name="On any click" sid="241532496508004" type="Mouse" />
+                <condition id="7" name="Cursor is over object" sid="732412768831254" type="Mouse">
+                    <param id="0" name="Object">trans34</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="618189581445112" type="System">
+                    <param id="0" name="Layout">Layout 4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="923008014885728">
+            <conditions>
+                <condition id="1" name="On any click" sid="283059554187280" type="Mouse" />
+                <condition id="7" name="Cursor is over object" sid="153643534412575" type="Mouse">
+                    <param id="0" name="Object">ending</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="818895941598373" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="141443467071480" type="System">
+                    <param id="0" name="Layout">ending2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="632262728918688">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="673794454904612" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="537336900007816" type="fadeScreen">
+                    <param id="0" name="Opacity">Brightness</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="597337936024322">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="328646559825650" type="introAnimation">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="893502613313984" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="945029885334119" type="System">
+                    <param id="0" name="Object to create">narracionintro1</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">924</param>
+                    <param id="3" name="Y">150</param>
+                </action>
+                <action id="-16" name="Wait" sid="859845921384846" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="772037945814738" type="System">
+                    <param id="0" name="Object to create">narracionintro2</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">622</param>
+                    <param id="3" name="Y">629</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="768233354725871">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="389413227739723" type="introAnimation">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="197717913594602" type="narracionintro1" />
+                <action id="-9" name="Destroy" sid="973426501774448" type="narracionintro2" />
+            </actions>
+        </event-block>
+        <event-block sid="124630163779666">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="898662695779745" type="introAnimation">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="820194066245288" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="192422577668186" type="System">
+                    <param id="0" name="Object to create">narracionintro3</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">900</param>
+                    <param id="3" name="Y">83</param>
+                </action>
+                <action id="-16" name="Wait" sid="489692093342428" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="685808603484966" type="System">
+                    <param id="0" name="Object to create">narracionintro4</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">230</param>
+                    <param id="3" name="Y">473</param>
+                </action>
+                <action id="-16" name="Wait" sid="273506341277133" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="285459802570797" type="System">
+                    <param id="0" name="Object to create">narracionintro5</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">960</param>
+                    <param id="3" name="Y">670</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="572404471025458">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="856618178157913" type="trans12">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="675108385455575" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="997080194772179" type="System">
+                    <param id="0" name="Object to create">narracion121</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">284</param>
+                    <param id="3" name="Y">130</param>
+                </action>
+                <action id="-16" name="Wait" sid="904036468474403" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="550468268092586" type="System">
+                    <param id="0" name="Object to create">narracion122</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">979</param>
+                    <param id="3" name="Y">525</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="291789327816502">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="985358148412748" type="trans23">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="546755741985374" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="594203938059598" type="System">
+                    <param id="0" name="Object to create">narracion23</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">401</param>
+                    <param id="3" name="Y">123</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="346375671235431">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="722374412645544" type="trans34">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="935315194846362" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="708281482071534" type="System">
+                    <param id="0" name="Object to create">narracion341</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">1046</param>
+                    <param id="3" name="Y">58</param>
+                </action>
+                <action id="-16" name="Wait" sid="780081344269853" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="398831722849140" type="System">
+                    <param id="0" name="Object to create">narracion342</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">721</param>
+                    <param id="3" name="Y">215</param>
+                </action>
+                <action id="-16" name="Wait" sid="552271379466829" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="504275037392607" type="System">
+                    <param id="0" name="Object to create">naracion343</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">236</param>
+                    <param id="3" name="Y">336</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="167383849127688">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="905464632524959" type="ending">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="138442333556655" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="341737842841951" type="System">
+                    <param id="0" name="Object to create">Sprite</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">1017</param>
+                    <param id="3" name="Y">103</param>
+                </action>
+                <action id="-16" name="Wait" sid="273599589327203" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="660315428203700" type="System">
+                    <param id="0" name="Object to create">Sprite4</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">308</param>
+                    <param id="3" name="Y">324</param>
+                </action>
+                <action id="-16" name="Wait" sid="373169140150734" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="900844553072436" type="System">
+                    <param id="0" name="Object to create">Sprite5</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">962</param>
+                    <param id="3" name="Y">644</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="383936231457756">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="567821526241214" type="ending">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="126354585210701" type="Sprite" />
+            </actions>
+        </event-block>
+        <event-block sid="566933044579247">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="240654445516596" type="thunder" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="785330553664767" type="Audio">
+                    <param id="0" name="Audio file">rain_start</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="885772047550233" type="thunder" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
