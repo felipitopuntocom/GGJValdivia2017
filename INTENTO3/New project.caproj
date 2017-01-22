@@ -1344,6 +1344,17 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="introAnimation2" sid="246621711818615">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="transition" sid="949210859326139" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="708085346627796" speed="0.3">
+                    <frame duration="2" hotspotX="0.5" hotspotY="0.5" original-source="G:\GGJ\Img\Title_screen.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -1352,6 +1363,7 @@
         <layout>trans2-3.xml</layout>
         <layout>trans3-4.xml</layout>
         <layout>ending.xml</layout>
+        <layout>ending2.xml</layout>
         <layout>Layout 1.xml</layout>
         <layout>Layout 2.xml</layout>
         <layout>Layout 3.xml</layout>
